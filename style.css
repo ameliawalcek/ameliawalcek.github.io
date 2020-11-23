@@ -320,7 +320,6 @@ section .title::after {
 }
 
 /* skills section styling */
-
 .photo-row {
     display: flex;
     flex-wrap: wrap;
@@ -436,50 +435,32 @@ section .title::after {
 
 /* contact section styling */
 
+.contact .title {
+    padding-bottom: 0px;
+    margin-bottom: 35px;
+}
+
+.contact .contact-content .icons i {
+    font-size: 50px;
+    color: #91F3E4;
+    padding: 0px 20px 20px 20px;
+}
+
+.contact .contact-content .icons {
+    width: 100%;
+    text-align-last: center;
+}
+
 .contact .contact-content .column {
-    width: calc(50% - 30px);
+    width: 100%;
+    margin: 0 25% 0 25%;
 }
 
 .contact .contact-content .text {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
-}
-
-.contact .contact-content .left p {
-    text-align: justify;
-}
-
-.contact .contact-content .left .icons {
-    margin: 10px 0;
-}
-
-.contact .contact-content .row {
-    display: flex;
-    height: 35px;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.705);
-    padding-left: 100px;
-    margin: 10px;
-    font-weight: 500;
-    font-size: 18px;
-}
-
-.contact .contact-content .row .info {
-    margin-left: 30px;
-}
-
-.contact .contact-content .row i {
-    font-size: 30px;
-    color: #4EA8DE;
-}
-
-.contact .contact-content .info .head {
-    font-weight: 500;
-}
-
-.contact .contact-content .info .sub-title {
-    color: #333;
+    color: white;
 }
 
 .contact .right form .fields {
@@ -584,6 +565,7 @@ footer span a:hover {
         width: 350px;
     }
 }
+
 @media (max-width: 1000px) {
     .contact .contact-content .row {
         padding-left: 65px;
@@ -678,6 +660,10 @@ footer span a:hover {
     }
     .services .serv-content .card {
         width: 100%;
+    }
+    .contact .contact-content .column {
+        width: 100%;
+        margin: 0 10% 0 10%;
     }
 }
 
