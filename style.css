@@ -98,7 +98,7 @@ section .title::after {
 
 .navbar.sticky {
     padding: 15px 0;
-    background: #7400B8;
+    background: 	#b241d6;
 }
 
 .navbar .max-width {
@@ -114,7 +114,7 @@ section .title::after {
 }
 
 .navbar .logo a span {
-    color: #7400B8;
+    color: 	#b241d6;
     transition: all 0.3s ease;
 }
 
@@ -137,7 +137,7 @@ section .title::after {
 }
 
 .navbar .menu li a:hover {
-    color: #7400B8;
+    color: 	#b241d6;
 }
 
 .navbar.sticky .menu li a:hover {
@@ -157,7 +157,7 @@ section .title::after {
     position: fixed;
     height: 45px;
     width: 42px;
-    background: #7400B8;
+    background:#b241d6;
     right: 30px;
     bottom: 10px;
     text-align: center;
@@ -221,26 +221,26 @@ section .title::after {
 }
 
 .name {
-    color: #7400B8;
+    color: 	#b241d6;
     font-weight: 600;
 }
 
 .home .home-content a {
     display: inline-block;
-    background: #4EA8DE;
-    color: #fff;
-    font-size: 25px;
-    padding: 12px 36px;
+    background: #91F3E4;
+    color: #b241d6;
+    font-size: 30px;
+    padding: 8px 17px;
     margin-top: 20px;
     font-weight: 600;
     border-radius: 6px;
-    border: 3px solid #4EA8DE;
+    border: 3px solid #91F3E4;
     transition: all 0.3s ease;
 }
 
 .home .home-content a:hover {
-    color: #4EA8DE;
-    border: 3px solid #4EA8DE;
+    color: #91F3E4;
+    border: 3px solid #91F3E4;
     background: none;
     font-weight: 600;
 }
@@ -278,7 +278,7 @@ section .title::after {
 }
 
 .about .about-content .right .text span {
-    color: #7400B8;
+    color: 	#b241d6;
 }
 
 .about .about-content .right p {
@@ -345,13 +345,13 @@ section .title::after {
 
 .projects .card a {
     display: inline-block;
-    background: #4EA8DE;
+    background:#91F3E4;
     color: #000;
     font-size: 21px;
     margin-top: 20px;
     font-weight: 600;
     border-radius: 6px;
-    border: 2px solid #4EA8DE;
+    border: 2px solid#91F3E4;
     transition: all 0.3s ease;
     width: 151px;
     position: absolute;
@@ -360,8 +360,8 @@ section .title::after {
 }
 
 .projects .card a:hover {
-    color: #4EA8DE;
-    border: 2px solid #4EA8DE;
+    color:#91F3E4;
+    border: 2px solid#91F3E4;
     background: none;
     font-weight: 600;
 }
@@ -420,7 +420,7 @@ section .title::after {
     margin: 0 5px;
     outline: none!important;
     border-radius: 50%;
-    border: 2px solid #91F3E4!important;
+    border: 2px solid#4EA8DE!important;
     transition: all 0.3s ease;
 }
 
@@ -430,11 +430,13 @@ section .title::after {
 }
 
 .owl-dot.active, .owl-dot:hover {
-    background: #91F3E4!important;
+    background: #4EA8DE!important;
 }
 
 /* contact section styling */
-
+.contact{
+    margin-bottom: 60px;
+}
 .contact .title {
     padding-bottom: 0px;
     margin-bottom: 35px;
@@ -449,6 +451,10 @@ section .title::after {
 .contact .contact-content .icons {
     width: 100%;
     text-align-last: center;
+}
+
+.contact .contact-content .icons i:hover {
+    color: #fff;
 }
 
 .contact .contact-content .column {
@@ -543,7 +549,7 @@ footer {
 }
 
 footer span a {
-    color: #7400B8;
+    color: 	#b241d6;
     text-decoration: none;
 }
 
