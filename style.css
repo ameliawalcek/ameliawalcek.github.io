@@ -188,6 +188,54 @@ section .title::after {
     filter: brightness(90%);
 }
 
+/* Social sidebar */
+
+.sticky-social {
+    position: fixed;
+    top: 50%;
+    right: 0px;
+    padding: 0px;
+    margin: 0px;
+    z-index: 10;
+}
+
+.social {
+    list-style: none;
+}
+
+.social li {
+    padding: 10px 10px;
+    font-size: 25px;
+    transition: all 0.5s ease-in-out;
+    background-color: #222;
+}
+
+.social li:hover {
+    margin-left: -30px;
+    box-shadow: 2px 5px 10px grey;
+}
+
+.social li:hover .fa {
+    margin-left: 2px;
+}
+
+.fa {
+    color: #fff;
+    transition: all 0.8s ease-in-out;
+}
+
+.linkedin:hover {
+    background-color: #0e76a8;
+}
+
+.github:hover {
+    background-color: rgb(97, 97, 97);
+}
+
+.email:hover {
+    background-color: #DC4F42;
+}
+
 /* home section styling */
 
 .home {
