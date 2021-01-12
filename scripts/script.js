@@ -18,32 +18,8 @@ $(document).ready(function () {
         $('.menu-btn i').toggleClass("active")
     })
 
-    let typed = new Typed(".typing", {
-        strings: ["Full Stack Developer"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    })
+    let typed = new Typed(".typing", { strings: ["Full Stack Developer"], typeSpeed: 100, backSpeed: 60, loop: true })
+    typed = new Typed(".typing-2", { strings: ["Full Stack Developer"], typeSpeed: 100, backSpeed: 60, loop: true })
 
-    typed = new Typed(".typing-2", {
-        strings: ["Full Stack Developer"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    })
-
-    $('.carousel').owlCarousel({
-        loop: true,
-        margin: 20,
-        autoplay: true,
-        slideTransition: 'linear',
-        autoplaySpeed: 3000,
-        autoplayHoverPause: true,
-        responsive: {
-            0: { items: 1, nav: false },
-            600: { items: 2, nav: false },
-            1000: { items: 3, nav: false },
-            1300: { items: 4, nav: false }
-        }
-    })
+    $('.carousel').owlCarousel({ loop: true, margin: 20, autoplay: true, slideTransition: 'linear', autoplaySpeed: 3000, autoplayHoverPause: true, responsive: { 0: { items: 1, nav: false }, 600: { items: 2, nav: false }, 1000: { items: 3, nav: false }, 1300: { items: 4, nav: false } } })
 })
