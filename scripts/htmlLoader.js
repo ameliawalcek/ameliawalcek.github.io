@@ -1,3 +1,7 @@
+const menu = [{ href: '#home', text: "Home" }, { href: "#about", text: "About" }, { href: "#projects", text: "Projects" }, { href: "#skills", text: "Skills" }, { href: "#contact", text: "Contact" }]
+
+const social = [{ href: "https://github.com/ameliawalcek", name: "github", icon: "fa fa-github" }, { href: "https://www.linkedin.com/in/amelia-walcek/", name: "linkedin", icon: "fa fa-linkedin" }, { href: "mailto: ameliawalcek@gmail.com", name: "email", icon: "fa fa-envelope" }]
+
 const skills = [
     { one: "assets/logos/jscsshtml.png", two: "assets/logos/ts.png", three: "assets/logos/docker.png" },
     { one: "assets/logos/react.png", two: "assets/logos/jquery.png", three: "assets/logos/wordpress.png" },
@@ -5,20 +9,6 @@ const skills = [
     { one: "assets/logos/npm.png", two: "assets/logos/mobx.png", three: "assets/logos/Materialui.png" },
     { one: "assets/logos/mongodb.png", two: "assets/logos/ts.png", three: "assets/logos/bootstrap.png" },
     { one: "assets/logos/sql.png", two: "assets/logos/puppeteer.png", three: "assets/logos/photoshop.png" }
-]
-
-const menu = [
-    { href: '#home', text: "Home" },
-    { href: "#about", text: "About" },
-    { href: "#projects", text: "Projects" },
-    { href: "#skills", text: "Skills" },
-    { href: "#contact", text: "Contact" },
-]
-
-const social = [
-    {href: "https://github.com/ameliawalcek", name: "github", icon: "fa fa-github"},
-    {href: "https://www.linkedin.com/in/amelia-walcek/", name: "linkedin", icon: "fa fa-linkedin"},
-    {href: "mailto: ameliawalcek@gmail.com", name: "email", icon: "fa fa-envelope"}
 ]
 
 const projects = [
@@ -81,46 +71,19 @@ const projects = [
 ]
 
 $(document).ready(function () {
-    skills.forEach(s => {
-        return (
-            $('.photo-row').append(
-                `<div class="photo-grid">
-                    <img src=${s.one}><img src=${s.two}><img src=${s.three}>
-                </div>`
-            ))
-    })
+    skills.forEach(s => $('.photo-row').append(`<div class="photo-grid"><img src=${s.one}><img src=${s.two}><img src=${s.three}></div>`))
 
-    menu.forEach(m => {
-        return $('.menu').append(`<li><a href=${m.href} class="menu-btn">${m.text}</a></li>`)
-    })
+    menu.forEach(m => $('.menu').append(`<li><a href=${m.href} class="menu-btn">${m.text}</a></li>`))
+
+    social.forEach(s => $('.social').append(`<a href=${s.href} target="_blank"><li class=${s.name}><i class="${s.icon}"></i></li></a>`))
 
     projects.forEach(p => {
         return (
-            $('#carousel').append(
-                `<div class="card">
-                <div class="box">
-                    <img class='project-img' src=${p.img} alt="">
-                    <div class="text card-title">${p.title}</div>
-                    <p class='card-content'>${p.description}</p>
-                    <div class='framework'>${p.framework}</div>
-                    <div class='code-links'>
-                        <a href=${p.code} target="_blank">Code</a>` +
-                        (p.live ? `<a href=${p.live} target="_blank">Live</a>` : ``) +
-                    `</div>
-                </div>
-            </div>`)
+            $('#carousel').append(`<div class="card"><div class="box"><img class='project-img' src=${p.img} alt=""><div class="text card-title">${p.title}</div>
+                <p class='card-content'>${p.description}</p><div class='framework'>${p.framework}</div><div class='code-links'><a href=${p.code} target="_blank">Code</a>`
+                + (p.live ? `<a href=${p.live} target="_blank">Live</a>` : ``)
+                + `</div></div></div>`)
         )
     })
 
-    social.forEach(s => {
-        return(
-            $('.social').append(
-                `<a href=${s.href} target="_blank">
-                    <li class=${s.name}>
-                        <i class="${s.icon}"></i>
-                    </li>
-                </a>`
-            )
-        )
-    })
 })
