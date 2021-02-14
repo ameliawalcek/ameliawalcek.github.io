@@ -46,8 +46,15 @@ section {
     margin: auto;
 }
 
-.about, .skills, .projects, .contact, footer {
+.about, .skills, .projects {
     font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: grid;
+}
+
+.contact, footer {
+    font-family: 'Poppins', sans-serif;
+    display: grid;
 }
 
 .about .about-content, .skills .skills-content, .contact .contact-content {
