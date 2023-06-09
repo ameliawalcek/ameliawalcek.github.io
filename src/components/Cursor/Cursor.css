@@ -1,0 +1,28 @@
+.large_circle,
+.medium_circle,
+.small_circle {
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transition: transform 0.1s;
+}
+
+.large_circle {
+    width: 64px;
+    height: 64px;
+    border: 2px solid #bf61ff;
+    box-shadow: 0 0 20px rgba(191, 97, 255, 0.6);
+}
+
+.medium_circle {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+    box-shadow: 0 0 16px #009b7e;
+}
+
+.small_circle {
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+}
