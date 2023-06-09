@@ -234,7 +234,7 @@ const projects = [
       },
     ],
     image: SnapShot,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ameliawalcek/SnapShot",
   },
   
  
@@ -265,7 +265,7 @@ const projects = [
       },
     ],
     image: ExpenseTracker,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ameliawalcek/Expense_Tracker",
   },
   {
     name: "WEBOX",
@@ -306,7 +306,7 @@ const projects = [
       },
     ],
     image: WEBOX,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ameliawalcek/WEBOX",
   },
   {
     name: "Mario Rush",
@@ -335,7 +335,7 @@ const projects = [
       },
     ],
     image: MarioRush,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ameliawalcek/Mario_Rush_Matrices",
   },
   {
     name: "Maze Game",
@@ -360,7 +360,7 @@ const projects = [
       },
     ],
     image: maze,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ameliawalcek/Maze_Game",
   },
 
   {
@@ -394,7 +394,7 @@ const projects = [
       },
     ],
     image: TaskTracker,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ameliawalcek/Task_Tracker",
   },
   {
     name: "Trivia Time",
@@ -423,7 +423,7 @@ const projects = [
       },
     ],
     image: TriviaTime,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ameliawalcek/Typescript_TriviaTime",
   },
 
   {
@@ -457,7 +457,7 @@ const projects = [
       },
     ],
     image: ChitChat,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ameliawalcek/Chit_Chat",
   },
 ];
 
