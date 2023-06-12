@@ -15,9 +15,11 @@ const ProjectCard = ({
   source_code_link,
 }) => (
   <motion.div
-    className="green-pink-gradient p-[1px] rounded-2xl shadow-card"
-    variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-  >
+  className="green-pink-gradient p-[1px] rounded-2xl shadow-card"
+  variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+  initial="initial"
+  animate="animate"
+>
     <Tilt
       options={{ max: 45, scale: 1, speed: 1000, }}
       className="bg-tertiary p-5 rounded-2xl h-[100%] sm:w-[360px] w-full"
@@ -31,12 +33,12 @@ const ProjectCard = ({
         <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
           <div
             onClick={() => window.open(source_code_link, "_blank")}
-            className="black-gradient w-12 h-12 rounded-full flex justify-center items-center cursor-pointer"
+            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
           >
             <img
               src={github}
               alt="source code"
-              className="w-1/2 h-1/2 object-contain "
+              className="w-1/2 h-1/2 object-contain"
             />
           </div>
         </div>
@@ -59,7 +61,7 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} initial="initial" animate="animate">
         <p className="justify-center sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
           Some of my work
         </p>
@@ -71,6 +73,8 @@ const Works = () => {
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-s-3xl leading-[30px]"
+          initial="initial"
+          animate="animate"
         >
           The Following projects showcase my skills and experience. Each project
           is described with links to code repositories with some live demos. It
@@ -86,5 +90,6 @@ const Works = () => {
     </>
   );
 };
+
 
 export default SectionWrapper(Works, "work");
