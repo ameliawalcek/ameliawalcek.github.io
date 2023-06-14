@@ -76,7 +76,7 @@ const Works = () => {
           initial="initial"
           animate="animate"
         >
-          The Following projects showcase my skills and experience. Each project
+          The following projects showcase my skills and experience. Each project
           is described with links to code repositories with some live demos. It
           reflects my ability to solve complex problems, work wth different
           technologies, and manage projects effectively.
