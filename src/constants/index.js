@@ -45,18 +45,36 @@ const services = [
   {
     title: "Web Developer",
     icon: web,
+    services_detail: [
+      "Proficient in front-end technologies such as HTML, CSS, and JavaScript",
+      "Experienced building responsive and visually appealing websites using modern frameworks like React",
+    ],
   },
   {
     title: "React Native Developer",
     icon: mobile,
+    services_detail: [
+      "Created mobile applications for both iOS and Android platforms",
+      "Well-versed in state management libraries like Redux",
+      "Implemented features such as push notifications and geolocation services",
+    ],
   },
   {
     title: "Backend Developer",
     icon: creator,
+    services_detail: [
+      "Specialized in server-side programming using technologies like Node.js and Express.js",
+      "Designed and optimized databases",
+      "Proficient in API development and have implemented secure authentication mechanisms",
+    ],
   },
   {
     title: "UI/UX Developer",
     icon: backend,
+    services_detail: [
+      "Focused on user-centered design,  specializing in creating visually appealing and intuitive user interfaces",
+      "Expertise in wireframing, prototyping, and implementing user feedback to improve the user experience.",
+    ],
   },
 ];
 
@@ -210,8 +228,7 @@ const projects = [
     image: SnapShot,
     source_code_link: "https://github.com/ameliawalcek/SnapShot",
   },
-  
- 
+
   {
     name: "Expense Tracker",
     description:
@@ -313,8 +330,7 @@ const projects = [
   },
   {
     name: "Maze Game",
-    description:
-      "Maze game using matrices, beat the clock if you can...",
+    description: "Maze game using matrices, beat the clock if you can...",
     tags: [
       {
         name: "React",
@@ -339,8 +355,7 @@ const projects = [
 
   {
     name: "Task Tracker",
-    description:
-      "Add, remove, and keep track of your tasks",
+    description: "Add, remove, and keep track of your tasks",
     tags: [
       {
         name: "JS",
@@ -402,8 +417,7 @@ const projects = [
 
   {
     name: "Chit Chat",
-    description:
-      "Join your favorite chat room and meet users across the globe",
+    description: "Join your favorite chat room and meet users across the globe",
     tags: [
       {
         name: "JS",
