@@ -136,9 +136,10 @@ const experiences = [
     iconBg: "#050816",
     date: "August 2020 - October 2020",
     points: [
-      "Completed an intensive MERN stack coding Bootcamp",
-      "Built interactive end-to-end websites and single-page applications",
-      "Collaborated within teams using Agile development workflow",
+      "Achieved 1st place in the end-of-bootcamp project among a class of 35",
+      "Successfully completed an 3 month MERN stack coding bootcamp",
+      "Designed and developed interactive end-to-end websites and single-page applications",
+      "Collaborated within teams, following Agile development methodologies",
     ],
   },
   {
@@ -148,9 +149,8 @@ const experiences = [
     iconBg: "#050816",
     date: "October 2020 - February 2021",
     points: [
-      "Trained over 35 developers in the MERN stack",
-      "Emphasized OOP and MVC architecture",
-      "Promoted agile workflow and encourage self-learning",
+      "Demonstrated leadership skills by training over 35 developers in the MERN stack",
+      "Emphasized OOP and MVC architecture, and promoting Agile workflows and self-learning",
       "Reviewed code to improve quality and readability",
     ],
   },
@@ -161,40 +161,14 @@ const experiences = [
     iconBg: "#050816",
     date: "February 2021 - Present",
     points: [
-      "Create and help publish Android and iOS React Native applications",
-      "Work closely with the product team to build an interactive virtual tour web application platform",
-      "Implement 360° interactive videos, Twilio 3-way video chat feature, and  a text chat function using socket.io",
-      "Use sockets to emit and store live tour data",
-      "Build and maintain REST  API and SQL databases",
-      "Implementing responsive design and ensuring cross-browser compatibility (iOS, android, FireFox, Safari, and Chrome)",
+      "Launch and maintain multiple Android and iOS React Native applications",
+      "Design and develop highly scalable web-based user interfaces and components using React, resulting in improved load times",
+      "Collaborate with product team to plan and  implement new features",
+      "Provide ongoing maintenance on assigned applications and systems",
+      "Develop a scalable web-based virtual tour application with over 20  interactive 360° videos, Twilio 3-way video chat sessions, and socket.io to emit and store live tour data",
+      "Build and maintain multiple REST APIs and databases, ensuring reliable data access and scalable architecture",
+      "Achieve cross-platform compatibility for applications on iOS, Android, FireFox, Safari, and Chrome",
     ],
-  },
-];
-
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
@@ -461,4 +435,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };
