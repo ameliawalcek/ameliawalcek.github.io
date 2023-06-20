@@ -123,10 +123,10 @@ const experiences = [
     iconBg: "#050816",
     date: "May 2017 - June 2020",
     points: [
-      "Executed full-cycle global conferences (25 - 8,000 participants)",
-      "Convened with clients weekly to guarantee satisfaction",
-      "Coordinated departments to ensure a unified purpose",
-      "Designed conference websites, application, and printed materials",
+      "Successfully executed full-cycle global conferences ranging from 25 to 8,000 participants",
+      "Conducted regular meetings with clients to ensure their satisfaction and address any concerns",
+      "Coordinated and aligned multiple departments to ensure a unified purpose and seamless event execution",
+      "Designed and developed conference websites, applications, and printed materials",
     ],
   },
   {
@@ -136,8 +136,8 @@ const experiences = [
     iconBg: "#050816",
     date: "August 2020 - October 2020",
     points: [
-      "Achieved 1st place in the end-of-bootcamp project among a class of 35",
-      "Successfully completed an 3 month MERN stack coding bootcamp",
+      "Achieved 1st place in the end-of-bootcamp project among a class of 35 students",
+      "Successfully completed a 3 month MERN stack coding bootcamp",
       "Designed and developed interactive end-to-end websites and single-page applications",
       "Collaborated within teams, following Agile development methodologies",
     ],
