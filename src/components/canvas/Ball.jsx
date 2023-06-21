@@ -6,8 +6,9 @@ import {
   OrbitControls,
   Preload,
   useTexture,
+  PerspectiveCamera,
 } from "@react-three/drei";
-
+import * as THREE from "three";
 import CanvasLoader from "../Loader";
 
 const Ball = (props) => {
@@ -19,7 +20,7 @@ const Ball = (props) => {
   }, [hovered]);
 
   return (
-    <Float speed={1.75} rotationIntensity={1} floatIntensity={5}>
+    <Float speed={3} rotationIntensity={2} floatIntensity={6}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
       <mesh
@@ -27,21 +28,15 @@ const Ball = (props) => {
         onPointerOut={() => setHovered(false)}
         castShadow
         receiveShadow
-        scale={2.75}
+        scale={1.2}
       >
-        <icosahedronGeometry args={[1, 1]} />
+        <boxGeometry args={[4.7, 4.7, 4.7]} />
         <meshStandardMaterial
           color="#fff8eb"
-          polygonOffset
-          polygonOffsetFactor={-5}
-          flatShading
-        />
-        <Decal
+          flatShading={true}
+          map={decal}
           position={[0, 0, 1]}
           rotation={[2 * Math.PI, 0, 6.25]}
-          scale={1}
-          map={decal}
-          flatShading
         />
       </mesh>
     </Float>
@@ -71,9 +66,10 @@ const BallCanvas = ({ icon }) => {
     <Canvas
       frameloop="always"
       dpr={isMobile ? [0.5, 1] : [1, 5]}
-      gl={{ preserveDrawingBuffer: true }}
+      gl={{ preserveDrawingBuffer: false }}
     >
       <Suspense fallback={<CanvasLoader />}>
+        <PerspectiveCamera makeDefault position={[5, 3, 10]} />
         <OrbitControls enableZoom={false} />
         <Ball imgUrl={icon} />
       </Suspense>
