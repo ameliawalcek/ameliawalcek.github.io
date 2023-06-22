@@ -1,5 +1,5 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import React, { Suspense, useEffect, useState, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
@@ -7,6 +7,11 @@ import CanvasLoader from "../Loader";
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
   const [hovered, setHovered] = useState(false);
+  const myMesh = useRef();
+
+  useFrame(() => {
+    myMesh.current.rotation.y += 0.002;
+  });
 
   useEffect(() => {
     document.body.style.cursor = hovered ? "pointer" : "auto";
@@ -16,6 +21,7 @@ const Computers = ({ isMobile }) => {
     <mesh
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
+      ref={myMesh}
     >
       <hemisphereLight intensity={0.15} groundColor="black" />
       <spotLight
@@ -58,7 +64,7 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
-      frameloop="demand"
+      frameloop="always"
       shadows
       dpr={!isMobile ? [1, 2] : [0.25, 0.5]}
       camera={{ position: [20, 3, 5], fov: 25 }}
