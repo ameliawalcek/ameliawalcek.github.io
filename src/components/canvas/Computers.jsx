@@ -5,10 +5,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  console.log(isMobile)
-  const computer = isMobile
-  ? useGLTF("./sci_-_fi_computer_game_ready/scene.gltf")
-  : useGLTF("./desktop_pc/scene.gltf");
+  const computer = useGLTF("./desktop_pc/scene.gltf");
   const [hovered, setHovered] = useState(false);
   const myMesh = useRef();
 
@@ -38,9 +35,9 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? .8 : 0.75}
+        scale={isMobile ? 0.6 : 0.75}
         position={isMobile ? [0, -3, -1.9] : [0, -3.25, -1.5]}
-        rotation={!isMobile ? [-0.01, -0.2, -0.1] : [0, 0, 0]}
+        rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
   );
@@ -69,7 +66,7 @@ const ComputersCanvas = () => {
     <Canvas
       frameloop="always"
       shadows
-      dpr={[1, 2]}
+      dpr={!isMobile ? [1, 2] : [0.25, 0.5]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
