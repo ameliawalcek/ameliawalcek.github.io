@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
@@ -15,23 +15,59 @@ const Contact = () => {
     message: "",
   });
 
+  const [formError, setFormError] = useState({
+    name: false,
+    email: false,
+    message: false,
+  });
+
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [error, setError] = useState(false);
+  const [isDirty, setIsDirty] = useState(false);
+  const[formSubmitted, setFormSubmitted] = useState(false);
 
   const handleChange = ({ target }) => {
     const { name, value } = target;
 
-    setForm({
-      ...form,
-      [name]: value,
+    setForm({ ...form, [name]: value });
+  };
+
+  const validateForm = async () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    const validationResults = {
+      message: form.message.length === 0,
+      name: form.name.length === 0,
+      email: !emailRegex.test(form.email),
+    };
+
+    return new Promise((resolve) => {
+      resolve(validationResults);
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
+  useEffect(() => {
+    if (!isDirty) return;
 
+    const validate = async () => {
+      const formErrors = await validateForm();
+      setFormError(formErrors);
+    };
+
+    validate();
+  }, [form]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsDirty(true);
+
+    const formErrors = await validateForm();
+    setFormError(formErrors);
+
+    if (formErrors.name || formErrors.message || formErrors.email) return;
+
+    setLoading(true);
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -40,7 +76,7 @@ const Contact = () => {
           from_name: form.name,
           to_name: "Amelia Walcek",
           from_email: form.email,
-          to_email: "ameliawalcek@gmail.com",
+          to_email: import.meta.env.PERSONAL_EMAIL,
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -49,12 +85,14 @@ const Contact = () => {
         () => {
           setLoading(false);
           setMessage("Thank you. I will get back to you as soon as possible.");
-          setError(false)
+          setError(false);
           setForm({
             name: "",
             email: "",
             message: "",
           });
+          setIsDirty(false);
+          setFormSubmitted(true)
         },
         (error) => {
           setLoading(false);
@@ -63,6 +101,7 @@ const Contact = () => {
           setMessage(
             "Ahh, something went wrong. Please try again or email me at ameliawalcek@gmail.com."
           );
+          setIsDirty(false);
         }
       );
   };
@@ -88,7 +127,13 @@ const Contact = () => {
             className="mt-12 flex flex-col gap-8"
           >
             <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">Name</span>
+              <span
+                className={`${
+                  formError.name ? "text-red-500" : "text-white"
+                }  font-medium mb-4`}
+              >
+                Name
+              </span>
               <input
                 type="text"
                 name="name"
@@ -98,7 +143,13 @@ const Contact = () => {
               />
             </label>
             <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">Email</span>
+              <span
+                className={`${
+                  formError.email ? "text-red-500" : "text-white"
+                }  font-medium mb-4`}
+              >
+                Email
+              </span>
               <input
                 type="email"
                 name="email"
@@ -108,7 +159,13 @@ const Contact = () => {
               />
             </label>
             <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">Message</span>
+              <span
+                className={`${
+                  formError.message ? "text-red-500" : "text-white"
+                }  font-medium mb-4`}
+              >
+                Message
+              </span>
               <textarea
                 rows={7}
                 name="message"
@@ -120,12 +177,12 @@ const Contact = () => {
             <div className={`${!error ? "text-secondary" : "text-[#d269fc]"}`}>
               {message}
             </div>
-            <button
+            {!formSubmitted && <button
               type="submit"
               className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
             >
               {loading ? "Sending..." : "Send"}
-            </button>
+            </button>}
           </form>
         </motion.div>
         <motion.div
