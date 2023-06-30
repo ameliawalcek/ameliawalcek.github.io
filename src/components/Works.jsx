@@ -17,7 +17,7 @@ const ProjectCard = ({
   return (
     <motion.div
       className="green-pink-gradient p-[1px] rounded-2xl cursor-pointer shadow-card"
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      // variants={fadeIn("up", "spring", index * 0.5, 0.75)}
       onClick={() => window.open(source_code_link, "_blank")}
     >
       <Tilt
@@ -65,7 +65,9 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div 
+      // variants={textVariant()}
+      >
         <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
           SOME OF MY WORK
         </p>
@@ -75,7 +77,7 @@ const Works = () => {
       </motion.div>
 
       <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
+        // variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         The following projects showcase my skills and experience. Each project
