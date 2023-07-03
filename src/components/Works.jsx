@@ -18,7 +18,7 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div
-      className="green-pink-gradient p-[1px] rounded-2xl cursor-pointer shadow-card mb-8 sm:mb-0"
+      className="green-pink-gradient p-[1px] rounded-2xl cursor-pointer shadow-card"
       variants={!isMobile && fadeIn("up", "spring", index * 0.5, 0.75)}
       onClick={() => window.open(source_code_link, "_blank")}
     >

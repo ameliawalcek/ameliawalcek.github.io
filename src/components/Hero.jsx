@@ -12,7 +12,7 @@ const Hero = () => (
         <div className="w-1 sm:h-80 h-40 bg-gradient-to-b from-[#00cea8] via-[#d269fc] to-[#00cea800]" />
       </div>
       <div>
-        <h1 className="font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2">
+        <h1 className="font-black text-white text-[30px] lg:text-[80px] sm:text-[60px] lg:leading-[98px] mt-2">
           Hi, I'm <span className="text-[#d269fc]">Amelia</span>
         </h1>
         <p
@@ -28,7 +28,7 @@ const Hero = () => (
       <div></div>
     </div>
     <ComputersCanvas />
-    <div className="absolute bottom-5 s:bottom-32 w-full flex justify-center items-center">
+    <div className="absolute bottom-20 s:bottom-32 w-full flex justify-center items-center">
       <a href="#about">
         <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
           <motion.div

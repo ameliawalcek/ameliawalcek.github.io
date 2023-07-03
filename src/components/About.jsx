@@ -8,14 +8,12 @@ import { SectionWrapper } from "../hoc";
 const ServiceCard = ({ index, title, icon, services_detail }) => {
   const [cardFlipped, setCardFlipped] = useState(false);
 
-  const flipCard = () => {
-    setCardFlipped(!cardFlipped);
-  };
+  const flipCard = () => setCardFlipped(!cardFlipped);
 
   return (
     <Tilt
       options={{ reverse: true, reset: false, scale: 1 }}
-      className="mb-8 sm:mb-0 xs:w-[250px] w-full "
+      className="xs:w-[250px] w-full "
     >
       <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
