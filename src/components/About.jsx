@@ -14,11 +14,11 @@ const ServiceCard = ({ index, title, icon, services_detail }) => {
 
   return (
     <Tilt
-      options={{ reverse: true, reset: false }}
-      className="xs:w-[250px] w-full"
+      options={{ reverse: true, reset: false, scale: 1 }}
+      className="mb-8 sm:mb-0 xs:w-[250px] w-full "
     >
       <motion.div
-        variants={fadeIn("left", "spring", index * 0.5, 0.75)}
+        variants={fadeIn("right", "spring", index * 0.5, 0.75)}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <motion.div

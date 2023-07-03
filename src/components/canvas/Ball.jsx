@@ -8,14 +8,12 @@ import {
   PerspectiveCamera,
 } from "@react-three/drei";
 import CanvasLoader from "../Loader";
+import { useDeviceDetect } from "../../utils/useDeviceDetect";
+import { useHoverDetect } from "../../utils/useHoverDetect";
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
-  const [hovered, setHovered] = useState(false);
-
-  useEffect(() => {
-    document.body.style.cursor = hovered ? "pointer" : "auto";
-  }, [hovered]);
+  const { setHovered } = useHoverDetect();
 
   return (
     <Float speed={3} rotationIntensity={2} floatIntensity={6}>
@@ -42,23 +40,7 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
-
-    setIsMobile(mediaQuery.matches);
-
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
-    };
-
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
-  }, []);
+  const { isMobile } = useDeviceDetect();
 
   return (
     <Canvas

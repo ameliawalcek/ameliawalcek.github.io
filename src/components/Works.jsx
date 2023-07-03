@@ -5,6 +5,7 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { useDeviceDetect } from "../utils/useDeviceDetect";
 
 const ProjectCard = ({
   index,
@@ -13,11 +14,12 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  isMobile,
 }) => {
   return (
     <motion.div
-      className="green-pink-gradient p-[1px] rounded-2xl cursor-pointer shadow-card"
-      // variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      className="green-pink-gradient p-[1px] rounded-2xl cursor-pointer shadow-card mb-8 sm:mb-0"
+      variants={!isMobile && fadeIn("up", "spring", index * 0.5, 0.75)}
       onClick={() => window.open(source_code_link, "_blank")}
     >
       <Tilt
@@ -63,9 +65,10 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  const { isMobile } = useDeviceDetect();
   return (
     <>
-      <motion.div 
+      <motion.div
       // variants={textVariant()}
       >
         <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
@@ -77,7 +80,7 @@ const Works = () => {
       </motion.div>
 
       <motion.p
-        // variants={fadeIn("", "", 0.1, 1)}
+        variants={!isMobile && fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         The following projects showcase my skills and experience. Each project
@@ -85,9 +88,14 @@ const Works = () => {
         reflects my ability to solve complex problems, work wth different
         technologies, and manage projects effectively.
       </motion.p>
-      <div className="justify-center mt-20 flex flex-wrap gap-7">
+      <div className="justify-center sm:mt-20 flex flex-wrap gap-7">
         {projects.map((project, i) => (
-          <ProjectCard key={`project-${i}`} index={i} {...project} />
+          <ProjectCard
+            key={`project-${i}`}
+            index={i}
+            isMobile={isMobile}
+            {...project}
+          />
         ))}
       </div>
     </>
