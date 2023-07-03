@@ -18,8 +18,8 @@ const Computers = () => {
 
   return (
     <mesh
-      onPointerOver={() => setHovered(true)}
-      onPointerOut={() => setHovered(false)}
+      onPointerOver={() => !isMobile && setHovered(true)}
+      onPointerOut={() => !isMobile && setHovered(false)}
       ref={myMesh}
     >
       <hemisphereLight intensity={0.15} groundColor="black" />

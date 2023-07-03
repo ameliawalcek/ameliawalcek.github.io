@@ -8,8 +8,8 @@ const Hero = () => (
       className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto sm:px-16 px-6 flex flex-row items-start gap-5`}
     >
       <div className="flex flex-col justify-center items-center mt-5">
-        <div className="w-5 mr-6 sm:mr-0 h-5 rounded-full bg-[#00cea8]" />
-        <div className="w-1 mr-6 sm:mr-0 sm:h-80 h-40 bg-gradient-to-b from-[#00cea8] via-[#d269fc] to-[#00cea800]" />
+        <div className="w-5 h-5 rounded-full bg-[#00cea8]" />
+        <div className="w-1 sm:h-80 h-40 bg-gradient-to-b from-[#00cea8] via-[#d269fc] to-[#00cea800]" />
       </div>
       <div>
         <h1 className="font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2">
