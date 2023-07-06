@@ -14,9 +14,9 @@ const Tech = () => {
           initial="initial"
           animate="animate"
         >
-          <p className="justify-center sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
+          <span className="justify-center sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
             Click, drag, and interact...
-          </p>
+          </span>
         </motion.p>
       </div>
       <div className="flex flex-row flex-wrap justify-center gap-10">
