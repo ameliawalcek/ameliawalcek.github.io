@@ -19,7 +19,7 @@ const CrystalPlanet = () => {
         <primitive
           object={planet.scene}
           scale={isMobile ? 0.6 : 0.8}
-          position={isMobile ? [0, -1, -.5] : [0, -.5, .6]}
+          position={isMobile ? [0, -.3, -.5] : [0, -.5, -1.1]}
         />
       </group>
       <hemisphereLight intensity={1} groundColor="black" />
