@@ -51,7 +51,7 @@ const services = [
     icon: web,
     services_detail: [
       "Proficient in front-end technologies such as HTML, CSS, and JavaScript",
-      "Experienced building responsive and visually appealing websites using modern frameworks like React",
+      "Experienced building responsive and visually appealing websites using modern frameworks including React",
     ],
   },
   {
@@ -59,7 +59,7 @@ const services = [
     icon: mobile,
     services_detail: [
       "Created mobile applications for both iOS and Android platforms",
-      "Well-versed in state management libraries like Redux",
+      "Well-versed in state management libraries such as Redux",
       "Implemented features such as push notifications and geolocation services",
     ],
   },
@@ -67,7 +67,7 @@ const services = [
     title: "Backend Developer",
     icon: creator,
     services_detail: [
-      "Specialized in server-side programming using technologies like Node.js and Express.js",
+      "Specialized in server-side programming using technologies including Node.js and Express.js",
       "Designed and optimized databases",
       "Proficient in API development and have implemented secure authentication mechanisms",
     ],
@@ -152,14 +152,14 @@ const experiences = [
     ],
   },
   {
-    title: "Fullstack Developer Bootcamp",
+    title: "Fullstack Developer Boot Camp",
     company_name: "Elevation",
     icon: creator,
     iconBg: "#050816",
     date: "August 2020 - October 2020",
     points: [
-      "Achieved 1st place in the end-of-bootcamp project among a class of 35 students",
-      "Successfully completed a 3 month MERN stack coding bootcamp",
+      "Earned top honors, securing 1st place in the final project among 35 talented developers",
+      "Successfully completed a 3 month MERN stack coding boot camp",
       "Designed and developed interactive end-to-end websites and single-page applications",
       "Collaborated within teams, following Agile development methodologies",
     ],
@@ -171,9 +171,9 @@ const experiences = [
     iconBg: "#050816",
     date: "October 2020 - February 2021",
     points: [
-      "Demonstrated leadership skills by training over 35 developers in the MERN stack",
-      "Emphasized OOP and MVC architecture, and promoting Agile workflows and self-learning",
-      "Reviewed code to improve quality and readability",
+      "Trained 35+ developers in the MERN stack, resulting in an 80% increase in project completion rates",
+      "Championed OOP and MVC architecture, fostering Agile workflows and self-learning",
+      "Reviewed code for 20+ projects, elevating quality and readability",
     ],
   },
   {
@@ -183,13 +183,16 @@ const experiences = [
     iconBg: "#050816",
     date: "February 2021 - Present",
     points: [
-      "Launch and maintain multiple Android and iOS React Native applications",
-      "Design and develop highly scalable web-based user interfaces and components using React, resulting in improved load times",
-      "Collaborate with product team to plan and  implement new features",
-      "Provide ongoing maintenance on assigned applications and systems",
-      "Develop a scalable web-based virtual tour application with over 20  interactive 360° videos, Twilio 3-way video chat sessions, and socket.io to emit and store live tour data",
-      "Build and maintain multiple REST APIs and databases, ensuring reliable data access and scalable architecture",
-      "Achieve cross-platform compatibility for applications on iOS, Android, FireFox, Safari, and Chrome",
+      "Lead successful launches of 4 React Native applications for Android and iOS",
+      "Integrate third-party APIs, enhancing app functionality and user experience",
+      "Engineer 5 scalable, high-performance web interfaces using React",
+      "Collaborate with the product team to implement innovative features",
+      "Ensure 99.9% uptime through proactive application maintenance",
+      "Utilize A/B testing and user feedback to enhance app usability",
+      "Create an immersive web-based virtual tour app with 20+ interactive 360° videos",
+      "Implement Twilio 3-way video chat and socket.io for real-time tour engagement",
+      "Build and manage REST APIs and databases, reducing response times by 50%",
+      "Achieve cross-platform compatibility for iOS, Android, Firefox, Safari, and Chrome",
     ],
   },
 ];

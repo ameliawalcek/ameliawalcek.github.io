@@ -21,9 +21,9 @@ const Hero = () => (
           Enjoy exploring this interactive 3D animated portfolio. <br />
           Welcome to my world...
         </p>
-        <div className="flex justify-center items-center">
+        {/* <div className="flex justify-center items-center">
           <img src={rotate} alt="rotate" />
-        </div>
+        </div> */}
       </div>
       <div></div>
     </div>
