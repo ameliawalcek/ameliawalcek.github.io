@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio showcasing my skills and projects as a Full Stack Developer!
 
-🔗 [View the Portfolio](https://ameliawalcek.github.io/)
+🔗 [View my Portfolio](https://ameliawalcek.github.io/)
 
 ## Technologies Used
 
